@@ -10,11 +10,12 @@
 [logo]: https://github.com/hangdra/StreamWebUnlike/blob/master/images/dislike218_235.png "Logo of 直播dislike"
 
   给斗鱼网页用户提供一款chrome浏览器扩展程序，在页面屏蔽自己不喜欢的主播。
+
 ### 有不喜欢的主播？每次在网页看直播都会刷出来？？屏蔽不了？而且还被直播间360了？？？一个chrome 浏览器扩展程序帮助你解决烦恼！！
 
 ### 简介
 
-    本程序为[CHROME 浏览器](https://www.google.cn/intl/zh-CN/chrome/) 的扩展插件，用于在直播平台[斗鱼](https://www.douyu.com/)，给网页用户提供一款chrome浏览器扩展程序，在页面屏蔽自己不喜欢的主播，插件内所有操作可以撤销。
+  本程序为 [Chrome 浏览器] 的扩展插件，用于在直播平台[斗鱼]，给网页用户提供一款chrome浏览器扩展程序，在页面屏蔽自己喜欢的主播，插件内所有操作可以撤销。
 
 ### 功能
 
@@ -33,12 +34,12 @@
 
 ### <div id="env">运行环境:</div>
 
-- \[[Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/)\] \(<https://www.google.cn/intl/zh-CN/chrome/>\)
+- \[[Chrome 浏览器]\] \(<https://www.google.cn/intl/zh-CN/chrome/>\)
 
 ### <div id="third">运行环境:</div>
 
-- \[*optional1*\] \[[360压缩](https://yasuo.360.cn/)\]
-- \[*optional1*\] \[[Git BASH](https://gitforwindows.org/)\]
+- \[*optional1*\] \[[360压缩]\]
+- \[*optional1*\] \[[Git BASH]\]
 
 
 ### <div id="howToUse">下载安装与使用:</div>
@@ -74,26 +75,9 @@
 - [ ] 在网页上使用按钮直接屏蔽主播
 - [ ] 国际化（英文播报，日文播报 等)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[360压缩]:(https://yasuo.360.cn/)
+[Git BASH]:(https://gitforwindows.org/)
+[斗鱼]:(https://www.douyu.com/)
+[Chrome 浏览器]:(https://www.google.cn/intl/zh-CN/chrome/)
 [^直播dislike]:给斗鱼网页用户提供一款chrome浏览器扩展程序，在页面屏蔽自己不喜欢的主播。
 [^*optional1*]:可选项，同optional项一般只需下载一项。
