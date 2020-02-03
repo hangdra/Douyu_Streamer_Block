@@ -11,7 +11,7 @@
 
   给[斗鱼](https://www.douyu.com/)网页用户提供一款[Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/)扩展程序，屏蔽自己不喜欢的主播(只在网页端生效)。
 
-### 有不喜欢的主播？每次在网页看直播都会刷出来？？屏蔽不了？而且还被直播间360了？？？一个chrome 浏览器扩展程序帮助你解决烦恼！！
+### 有不喜欢的主播？每次在网页看直播都会刷出来？？屏蔽不了？最气的是早就被360了？？？？一个chrome 浏览器扩展程序帮助你解决烦恼！！
 
 ### 简介
 
@@ -21,7 +21,7 @@
 
 1. 屏蔽主播。
 2. 解除屏蔽。
-3. 插件设置借助[chrome.storage API](https://developer.chrome.com/apps/api_index) 根据账户可夸设备使用。
+3. 插件借助[chrome.storage API](https://developer.chrome.com/apps/api_index) 可跨设备使用而无需再次设置，1 次屏蔽，终生不见。
 
 ## 目录
 
@@ -68,7 +68,7 @@
 - 采集用户数据 [✘]
 - 外网通信 [✘]
 - 使用[chrome.storage API](https://developer.chrome.com/apps/api_index) 存储，检索，追踪用户插件内设置数据 [✔]
-- 可操作的域名：[斗鱼](https://www.douyu.com/)\(<https://www.douyu.com/>\) [✔]
+- 插件可进行活动的域名：[斗鱼](https://www.douyu.com/)\(<https://www.douyu.com/>\) [✔]
 - 使用[chrome.tts API](https://developer.chrome.com/apps/api_index) 进行语音提示 [✔]
 - 使用[chrome.webNavigation API](https://developer.chrome.com/apps/api_index) 获取页面状态，便于在页面加载完成后与页面交互 [✔]
 - 使用[chrome.alarms API](https://developer.chrome.com/apps/api_index) 进行代码调度，延迟或直接运行代码逻辑 [✔]
@@ -80,6 +80,7 @@
 - [ ] 开播提醒
 - [ ] 在网页上使用按钮直接屏蔽主播
 - [ ] 国际化（英文播报，日文播报 等)
+- [ ] 优化
 
 [Download Zip]: (/hangdra/StreamWebUnlike/archive/master.zip)
 [360压缩]: (https://yasuo.360.cn/)
