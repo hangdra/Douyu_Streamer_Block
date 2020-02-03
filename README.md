@@ -45,7 +45,7 @@
 ### <div id="howToUse">下载安装与使用:</div>
 
 >- 下载  
->>1. 通过 \[[Git BASH](https://gitforwindows.org/)\] 克隆或者点击[Download Zip](/hangdra/StreamWebUnlike/archive/master.zip)  下载本项目。  
+>>1. 通过 \[[Git BASH](https://gitforwindows.org/)\] 克隆或者点击[Download Zip](https://github.com/hangdra/StreamWebUnlike/archive/master.zip)  下载本项目。  
 >
 >- 安装  
 >>2. \[[Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/)\] 地址栏输入[chrome://extensions](chrome://extensions) 进入扩展程序页面。
