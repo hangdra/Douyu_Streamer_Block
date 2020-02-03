@@ -9,46 +9,46 @@
 
 [logo]: https://github.com/hangdra/StreamWebUnlike/blob/master/images/dislike218_235.png "Logo of 直播dislike"
 
-  给[斗鱼]网页用户提供一款[Chrome 浏览器]扩展程序，屏蔽自己不喜欢的主播(只在网页端生效)。
+  给[斗鱼](https://www.douyu.com/)网页用户提供一款[Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/)扩展程序，屏蔽自己不喜欢的主播(只在网页端生效)。
 
 ### 有不喜欢的主播？每次在网页看直播都会刷出来？？屏蔽不了？而且还被直播间360了？？？一个chrome 浏览器扩展程序帮助你解决烦恼！！
 
 ### 简介
 
-  本程序为 [Chrome 浏览器] 的扩展插件，用于在直播平台[斗鱼]，给网页用户提供一款chrome浏览器扩展程序，在页面屏蔽自己喜欢的主播，插件内所有操作可以撤销。
+  本程序为 [Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/) 的扩展插件，给用[斗鱼](https://www.douyu.com/)的用户提供一款浏览器扩展程序，屏蔽自己不喜欢的主播，插件内所有操作均可撤销。
 
 ### 功能
 
 1. 屏蔽主播。
 2. 解除屏蔽。
-3. 插件设置借助chrome.storage API 根据账户可夸设备使用。
+3. 插件设置借助[chrome.storage API](https://developer.chrome.com/apps/api_index) 根据账户可夸设备使用。
 
 ## 目录
 
-* [运行环境](#env)
-* [可能需要的第三方软件](#third)
-* [下载安装与使用](#howToUse)
-* [使用教程图文版本](#howToUseInStoryMode)
-* [依赖的权限](#privilege)
-* [或许会添加的功能](#never)
+* [运行环境](#运行环境)
+* [可能需要的第三方软件](#可能需要的第三方软件)
+* [下载安装与使用](#下载安装与使用)
+* [使用教程图文版本](#使用教程图文版本)
+* [依赖的权限](#依赖的权限)
+* [或许会添加的功能](#或许会添加的功能)
 
 ### <div id="env">运行环境:</div>
 
-- [Chrome 浏览器] \(<https://www.google.cn/intl/zh-CN/chrome/>\)
+- [Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/) \(<https://www.google.cn/intl/zh-CN/chrome/>\)
 
 ### <div id="third">运行环境:</div>
 
-- \[*optional1*\] \[[360压缩]\]
-- \[*optional1*\] \[[Git BASH]\]
+- \[可选\] \[[360压缩](https://yasuo.360.cn/)\]
+- \[可选\] \[[Git BASH](https://gitforwindows.org/)\]
 
 
 ### <div id="howToUse">下载安装与使用:</div>
 
 >- 下载  
->>1. 通过 \[[Git BASH]\] 或者页面[Download Zip]的方式 下载本项目。  
+>>1. 通过 \[[Git BASH](https://gitforwindows.org/)\] 克隆或者点击[Download Zip](/hangdra/StreamWebUnlike/archive/master.zip)  下载本项目。  
 >
 >- 安装  
->>2. \[[Chrome 浏览器]\] 地址栏输入<chrome://extensions> 进入扩展程序页面。
+>>2. \[[Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/)\] 地址栏输入[chrome://extensions](chrome://extensions) 进入扩展程序页面。
 >>3. 打开<kbd>开发者模式</kbd>（扩展程序页面右上角）。    
 >>4. 点击<kbd>加载已解压的扩展程序</kbd>并选择项目下载目录  （例如：F:\code\StreamWebUnlike）。    
 >
@@ -67,12 +67,13 @@
 - 读取本地数据 [✘]
 - 采集用户数据 [✘]
 - 外网通信 [✘]
-- 使用chrome.storage API存储，检索，追踪用户插件内设置数据 [✔]
+- 使用[chrome.storage API](https://developer.chrome.com/apps/api_index) 存储，检索，追踪用户插件内设置数据 [✔]
 - 可操作的域名：[斗鱼](https://www.douyu.com/)\(<https://www.douyu.com/>\) [✔]
-- 使用chrome.tts API 进行语音提示 [✔]
-- 使用chrome.webNavigation API 获取页面状态，便于在页面加载完成后与页面交互 [✔]
-- 使用chrome.alarms API 进行代码调度，延迟或直接运行代码逻辑 [✔]
-
+- 使用[chrome.tts API](https://developer.chrome.com/apps/api_index) 进行语音提示 [✔]
+- 使用[chrome.webNavigation API](https://developer.chrome.com/apps/api_index) 获取页面状态，便于在页面加载完成后与页面交互 [✔]
+- 使用[chrome.alarms API](https://developer.chrome.com/apps/api_index) 进行代码调度，延迟或直接运行代码逻辑 [✔]
+- 以上未提到但程序中使用的权限: [activeTab API 、 declarativeContent API](https://developer.chrome.com/apps/api_index) [✔]
+- 其它 [✘]
 
 ### <div id="never">或许会添加的功能:</div>
 
