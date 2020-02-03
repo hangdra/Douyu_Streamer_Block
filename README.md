@@ -69,7 +69,7 @@
 - 外网通信 [✘]
 - 使用chrome.storage API存储，检索，追踪用户插件内设置数据 [✔]
 - 可操作的域名：[斗鱼](https://www.douyu.com/)\(<https://www.douyu.com/>\) [✔]
-- 使用chrome.tts API 进行操作的语音提示 [✔]
+- 使用chrome.tts API 进行语音提示 [✔]
 - 使用chrome.webNavigation API 获取页面状态，便于在页面加载完成后与页面交互 [✔]
 - 使用chrome.alarms API 进行代码调度，延迟或直接运行代码逻辑 [✔]
 
