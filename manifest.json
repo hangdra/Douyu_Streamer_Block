@@ -1,0 +1,29 @@
+
+{
+  "name": "直播dislike",
+  "version": "1.5.1",
+  "description": "Build an Extension!",
+  "options_page": "options.html",
+  "permissions": ["https://www.douyu.com/","activeTab","declarativeContent", "storage","tts","webNavigation","alarms"],
+  "background": {
+    "scripts": ["scripts/background.js","scripts/popup.js","scripts/options.js"],
+    "persistent": false
+  },
+  "page_action": {
+      "default_title": "直播dislike",
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+      }
+    },
+    "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    },
+  "manifest_version": 2
+}
