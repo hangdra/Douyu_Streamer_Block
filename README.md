@@ -45,15 +45,15 @@
 ### <div id="howToUse">下载安装与使用:</div>
 
 >- 下载  
->>1. 通过 \[[Git BASH](https://gitforwindows.org/)\] 克隆或者点击[Download Zip](https://github.com/hangdra/StreamWebUnlike/archive/master.zip)  下载本项目。  
+>>1. 通过 \[[Git BASH](https://gitforwindows.org/)\]克隆或者点击 [Download Zip](https://github.com/hangdra/StreamWebUnlike/archive/master.zip) 下载本项目。  
 >
 >- 安装  
->>2. \[[Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/)\] 地址栏输入[chrome://extensions](chrome://extensions) 进入扩展程序页面。
+>>2. 在 [Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/) 地址栏输入[chrome://extensions](chrome://extensions) 进入扩展程序页面。
 >>3. 打开<kbd>开发者模式</kbd>（扩展程序页面右上角）。    
 >>4. 点击<kbd>加载已解压的扩展程序</kbd>并选择项目下载目录  （例如：F:\code\StreamWebUnlike）。    
 >
 >- 使用     
->>5. 右键点击地址栏右侧<kbd>直播dislike</kbd>按钮，选择<kbd>选项</kbd> 。    
+>>5. **右键点击**地址栏右侧<kbd>直播dislike</kbd>![直播dislike](https://github.com/hangdra/StreamWebUnlike/blob/master/images/dislike218_235.png "Logo of 直播dislike")按钮，选择<kbd>选项</kbd> 。    
 >>6. 在房间号一栏中**输入你不喜欢主播的房间号**，按  <kbd>Enter</kbd> （回车）直接屏蔽房间。  
 >>7. 对已屏蔽的主播，在**Dislike**下面找到对应的房间号，点击<kbd>✘</kbd>按钮并确认，可以取消屏蔽。  
 >>8. 点击 <kbd>清空dislike</kbd>并确认就可以使全播被屏蔽的主播复现。  
