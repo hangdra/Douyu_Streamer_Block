@@ -1,9 +1,11 @@
 let page = document.getElementById('buttonDiv');
 
-document.getElementById('roomId').onkeydown = function(){
-  if (event.keyCode == 13){
-     document.getElementById('unlike').click();
-     document.getElementById('roomId').value='';
+if(document.getElementById('roomId')){
+  document.getElementById('roomId').onkeydown = function(){
+    if (event.keyCode == 13){
+       document.getElementById('unlike').click();
+       document.getElementById('roomId').value='';
+    }
   }
 }
 // $("#roomId").bind("keydown",function(e){
@@ -38,6 +40,8 @@ if (unlikeBtn){
    if (roomIdVar!=''){
      chrome.storage.sync.get(['unlikes'], function(result) {
             if (!result.unlikes.includes(roomIdVar) ){
+              result.unlikes.push(roomIdVar);
+              chrome.storage.sync.set({unlikes: result.unlikes}, function() {});
               paintOneStreamerEle(roomIdVar,result.unlikes);
               voicecTalk("dislike  "+roomIdVar);
               console.log('Settings saved  '+roomIdVar);
@@ -86,6 +90,7 @@ function paintOneStreamerEle(streamerIdInput,wholeListInput=undefined){
   let likeDiv = document.createElement('div');
   likeDiv.setAttribute("value",streamerIdInput);
   likeDiv.setAttribute("style","float:left;margin:5px;cursor: cell;");
+  //clean one of the id out of dislike pool
   likeDiv.onclick = function(ele){
     voicecTalk("放出这个人？"+streamerIdInput);
     let likeAgainBool = confirm("放出这个人？"+streamerIdInput);
@@ -101,6 +106,7 @@ function paintOneStreamerEle(streamerIdInput,wholeListInput=undefined){
       });
     }
   }
+
   likeDiv.innerHTML="X"
   unlikesIdP.innerHTML = streamerIdInput;
   unlikesDiv.appendChild(unlikesIdP);

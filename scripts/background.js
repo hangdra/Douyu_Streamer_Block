@@ -6,10 +6,10 @@ var initVoice = true;
 
 //if need voice talk
 function voicecTalk(voiceStr){
-  console.log('voiceTalk function');
+  console.log('voicecTalk function');
   chrome.storage.sync.get(['voice'], function(result) {
     if(result && result.voice){
-      console.log('voiceTalk'+result.voice);
+      console.log('voicecTalk'+result.voice);
       chrome.tts.speak(voiceStr);
     }
   });
@@ -53,7 +53,7 @@ function hostEquals(inputUrl,tarUrl){
 chrome.webNavigation.onCompleted.addListener(function(e) {
   console.log(e);
        if (hostEquals(e.url, streamPlatformHost) ) {
-         voiceTalk("匹配斗鱼。");
+         voicecTalk("匹配斗鱼。");
          console.log("匹配斗鱼。");
          for(var i=1;i<10;i++){
            chrome.alarms.create("unlikeEvent"+i, {"when":Date.now()+500*i});
@@ -66,7 +66,7 @@ chrome.webNavigation.onCompleted.addListener(function(e) {
        //   });
        //   // ...
        // }else{
-       //  // voiceTalk("没匹配上斗鱼。");
+       //  // voicecTalk("没匹配上斗鱼。");
        // }
      }});
 
