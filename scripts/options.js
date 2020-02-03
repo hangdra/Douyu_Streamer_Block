@@ -107,7 +107,7 @@ function paintOneStreamerEle(streamerIdInput,wholeListInput=undefined){
     }
   }
 
-  likeDiv.innerHTML="X"
+  likeDiv.innerHTML="✘"
   unlikesIdP.innerHTML = streamerIdInput;
   unlikesDiv.appendChild(unlikesIdP);
   unlikesDiv.appendChild(likeDiv);
