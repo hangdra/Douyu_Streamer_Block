@@ -34,7 +34,7 @@
 
 ### <div id="env">运行环境:</div>
 
-- \[[Chrome 浏览器]\] \(<https://www.google.cn/intl/zh-CN/chrome/>\)
+- [Chrome 浏览器] \(<https://www.google.cn/intl/zh-CN/chrome/>\)
 
 ### <div id="third">运行环境:</div>
 
