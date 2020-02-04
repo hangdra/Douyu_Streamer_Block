@@ -53,7 +53,7 @@ function hostEquals(inputUrl,tarUrl){
 chrome.webNavigation.onCompleted.addListener(function(e) {
   console.log(e);
        if (hostEquals(e.url, streamPlatformHost) ) {
-         voicecTalk("匹配斗鱼。");
+         // voicecTalk("匹配斗鱼。");
          console.log("匹配斗鱼。");
          for(var i=1;i<10;i++){
            chrome.alarms.create("unlikeEvent"+i, {"when":Date.now()+500*i});
