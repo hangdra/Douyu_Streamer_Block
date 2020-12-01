@@ -30,13 +30,13 @@
 * [下载安装与使用](#下载安装与使用)
 * [使用教程图文版本](#使用教程图文版本)
 * [依赖的权限](#依赖的权限)
-* [或许会添加的功能](#或许会添加的功能)
+* [或许会添加的功能与更新](#或许会添加的功能与更新)
 
 ### <div id="env">运行环境:</div>
 
 - [Chrome 浏览器](https://www.google.cn/intl/zh-CN/chrome/) \(<https://www.google.cn/intl/zh-CN/chrome/>\)
 
-### <div id="third">运行环境:</div>
+### <div id="third">可能需要的第三方软件:</div>
 
 - \[可选\] \[[360压缩](https://yasuo.360.cn/)\]
 - \[可选\] \[[Git BASH](https://gitforwindows.org/)\]
@@ -75,7 +75,7 @@
 - 以上未提到但程序中使用的权限: [activeTab API 、 declarativeContent API](https://developer.chrome.com/apps/api_index) [✔]
 - 其它 [✘]
 
-### <div id="never">或许会添加的功能:</div>
+### <div id="never">或许会添加的功能与更新:</div>
 
 - [ ] 开播提醒
 - [ ] 在网页上使用按钮直接屏蔽主播
