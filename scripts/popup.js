@@ -5,41 +5,56 @@
 // 'use strict';
 //
 //
-// let switchEle = document.getElementById('switchBtn');
-//
-// //switch switch status..
-// function switchExchange(status){
-//   switchEle.checked=status
-//   chrome.storage.sync.set({switchStatus: status}, function() {});
-// }
-//
-// //switch function onclick
-// switchEle.onclick = function(element) {
-//   switchExchange(!switchVal);
-// };
-//
-// chrome.storage.sync.get(['switchStatus'], function(result) {
-//   switchExchange(result.switchStatus=="1")
-// });
-//
 
 
 
+window.onload=function(){
+    let switchBtn = document.getElementById('switchBtn');
+    console.log( "here log",switchBtn)
+    var platformHost = /^http(s)?:\/\/.*douyu.com\/.*/;
+    default_checked = true
+    init_check_input()
+    function init_check_input(){
+         chrome.storage.local.get(['switchBtn'], function(result) {
+            console.log("result",result)
+            if (result.switchBtn == null){
+                console.log("if status: switchBtn null")
+                chrome.storage.local.set({'switchBtn':default_checked}, function() {});
+                if(switchBtn.checked!=default_checked){
+                    switchBtn.click()
+                }
+            }else{
+                switchBtn.checked = result.switchBtn
+                console.log("if status: switchBtn ",result.switchBtn)
+            }
+         });
 
+    }
+    chrome.alarms.onAlarm.addListener(function(alarm){
+        console.log("pop:ararm"+Date.now()+" "+alarm.name);
+        chrome.tabs.query({ active: true, currentWindow: true} , function(tabs) {
+            if (chrome.runtime.lastError){
+                console.log("Whoops.. " + chrome.runtime.lastError.message);
+            }else{
+                if ((tabs != undefined )&& (tabs.length != 0 )){
+                    console.log("pop:web thing",tabs)
+                    if (platformHost.exec(tabs[0].url)&&platformHost.exec(tabs[0].url)[0]){
+                        console.log("pop:web thing running")
+                        chrome.tabs.executeScript(
+                            tabs[0].id,
+                            {file:"scripts/dislike.js"});
+                    }
+                };
+            }
+        });
+    });
 
+    //switch function onclick
+    switchBtn.onclick=function(element) {
+        console.log("status change switchBtn",switchBtn.checked);
+        console.log(switchBtn)
+        chrome.storage.local.set({'switchBtn': switchBtn.checked}, function() {});
+        chrome.alarms.create("unlikeEvent", {"when":Date.now()+300});
+    };
+}
 
-// let changeColor = document.getElementById('changeColor');
-// chrome.storage.sync.get('color', function(data) {
-//   changeColor.style.backgroundColor = data.color;
-//   changeColor.setAttribute('value', data.color);
-// });
-// changeColor.onclick = function(element) {
-//   chrome.alarms.create("bp")
-//   chrome.alarms.onAlarm.addListener()
-//   // let color = element.target.value;
-//   // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//   //   chrome.tabs.executeScript(
-//   //       tabs[0].id,
-//   //       {code: 'document.body.style.backgroundColor = "' + color + '";'});
-//   // });
-// };

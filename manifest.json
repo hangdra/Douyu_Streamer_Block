@@ -1,13 +1,27 @@
 
 {
   "name": "直播dislike",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "解决烦人的主播，精彩留给自己!",
   "options_page": "options.html",
-  "permissions": ["https://www.douyu.com/","activeTab","declarativeContent", "storage","tts","webNavigation","alarms"],
+  "permissions": ["https://www.douyu.com/","activeTab","declarativeContent", "storage","tts","ttsEngine",
+    "webNavigation","alarms","webRequest"],
+  "tts_engine": {
+    "voices": [
+      {
+        "voice_name": "Alice",
+        "lang": "en-US",
+        "event_types": ["start", "marker", "end"]
+      },
+      {
+        "voice_name": "Pat",
+        "lang": "en-US",
+        "event_types": ["end"]
+      }
+    ]
+  },
   "background": {
-    "scripts": ["scripts/background.js","scripts/popup.js","scripts/options.js"],
-    "persistent": false
+    "scripts": ["scripts/background.js"]
   },
   "page_action": {
       "default_title": "直播dislike",

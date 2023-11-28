@@ -22,7 +22,7 @@ if(document.getElementById('roomId')){
 //if need voice talk
 function voicecTalk(voiceStr){
   // console.log('voicecTalk function');
-  // chrome.storage.sync.get(['voice'], function(result) {
+  // chrome.storage.local.get(['voice'], function(result) {
   //   if(result && result.voice){
       // console.log('voicecTalk'+result.voice);
       chrome.tts.speak(voiceStr);
@@ -38,10 +38,11 @@ if (unlikeBtn){
 
    let roomIdVar = document.getElementById('roomId').value;
    if (roomIdVar!=''){
-     chrome.storage.sync.get(['unlikes'], function(result) {
+     chrome.storage.local.get(['unlikes'], function(result) {
+            console.log("ere123:",result)
             if (!result.unlikes.includes(roomIdVar) ){
               result.unlikes.push(roomIdVar);
-              chrome.storage.sync.set({unlikes: result.unlikes}, function() {});
+              chrome.storage.local.set({unlikes: result.unlikes}, function() {});
               paintOneStreamerEle(roomIdVar,result.unlikes);
               voicecTalk("dislike  "+roomIdVar);
               console.log('Settings saved  '+roomIdVar);
@@ -56,12 +57,12 @@ if (unlikeBtn){
 let unlikeClearBtn = document.getElementById('unlikeClear');
 if (unlikeClearBtn){
 unlikeClearBtn.onclick = function(element) {
-  chrome.storage.sync.get(['unlikes'], function(result) {
+  chrome.storage.local.get(['unlikes'], function(result) {
     let unlikeCount = result.unlikes.length
     voicecTalk("请确认清空共 "+unlikeCount+" 项dislike    吗?")
     let recon = confirm("请确认清空共 "+unlikeCount+" 项dislike吗？");
     if(recon){
-      chrome.storage.sync.set({unlikes: []}, function() {
+      chrome.storage.local.set({unlikes: []}, function() {
         page.innerHTML="";
         console.log('unlikes cleared ');
         voicecTalk("共清空 "+unlikeCount+" 项dislike。")
@@ -73,7 +74,8 @@ unlikeClearBtn.onclick = function(element) {
 }
 
 if (page){
-  chrome.storage.sync.get(['unlikes'], function(result) {
+  chrome.storage.local.get(['unlikes'], function(result) {
+    console.log("options:",result)
     for (let item of result.unlikes) {
       paintOneStreamerEle(item,result.unlikes);
     }
@@ -101,7 +103,7 @@ function paintOneStreamerEle(streamerIdInput,wholeListInput=undefined){
           unlikes2.push(item2);
         }
       }
-      chrome.storage.sync.set({unlikes: unlikes2}, function() {
+      chrome.storage.local.set({unlikes: unlikes2}, function() {
         unlikesDiv.outerHTML="";
       });
     }
