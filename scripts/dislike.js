@@ -16,7 +16,19 @@ function log_str(patten,...obj_ins){
 
 var listAllLi = document.querySelectorAll("section div.layout-Cover ul li")
 
+var ads = document.querySelectorAll("div.IconCardAdBoundsBox")
 
+var effect_user_in = document.querySelectorAll("div.layout-Player-effect")
+
+
+all_must_hide_objs = []
+all_must_hide_objs = all_must_hide_objs.concat(ads,effect_user_in)
+
+if (ads.length>0){
+    for (var adone of ads){
+        hide(adone)
+    }
+}
 //var result_of_status = false
 //chrome.storage.local.get(['switchBtn'], function(result) {
 //    result_of_status = result.switchBtn
