@@ -16,13 +16,16 @@ function log_str(patten,...obj_ins){
 
 var listAllLi = document.querySelectorAll("section div.layout-Cover ul li")
 
+var historyList = document.querySelectorAll("div.layout-Module-container.layout-Cover--single ul li")
+
 var ads = document.querySelectorAll("div.IconCardAdBoundsBox")
 
 var effect_user_in = document.querySelectorAll("div.layout-Player-effect")
 
 
 all_must_hide_objs = []
-all_must_hide_objs = all_must_hide_objs.concat(ads,effect_user_in)
+all_must_hide_objs = all_must_hide_objs.concat(listAllLi,historyList)
+//alert("listAllLi"+listAllLi.length+" historyList:"+historyList.length+" all_must_hide_objs:"+all_must_hide_objs.length)
 
 if (ads.length>0){
     for (var adone of ads){
@@ -60,19 +63,21 @@ function show_or_hidden(){
 //        log_str("f99513df718693d2996c91c4f091a7cf","show_or_hidden result",result)
     chrome.storage.local.get(['unlikes'], function(result) {
         console.log("dislike: show_or_hidden unlikes",result.unlikes)
-        if(result && result.unlikes && listAllLi){
+        if(result && result.unlikes && all_must_hide_objs){
 //            console.log("dislike: here we are listAllLi",listAllLi)
             chrome.storage.local.get(['switchBtn'], function(result2) {
 //            console.log("dislike: here we are result:",result)
-                for (var li of listAllLi){
-                    if (li && li.querySelector("a") && li.querySelector("a").getAttribute("href")){
-                        let roomIdVar = li.querySelector("a").getAttribute("href").substr(1);
-                        console.log("dislike: roomIdVar:",roomIdVar)
-                        if (result.unlikes.includes(roomIdVar)){
-                            if(result2.switchBtn){
-                                hide(li)
-                            }else{
-                                show(li)
+                for (var item_of_li of all_must_hide_objs){
+                    for (var li of item_of_li){
+                        if (li && li.querySelector("a") && li.querySelector("a").getAttribute("href")){
+                            let roomIdVar = li.querySelector("a").getAttribute("href").substr(1);
+                            console.log("dislike: roomIdVar:",roomIdVar)
+                            if (result.unlikes.includes(roomIdVar)){
+                                if(result2.switchBtn){
+                                    hide(li)
+                                }else{
+                                    show(li)
+                                }
                             }
                         }
                     }
